@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="human">human</string>
+    <string name="pig">pig</string>
+    <string name="dog">dog</string>
+    <string name="cat">cat</string>
+</resources>
