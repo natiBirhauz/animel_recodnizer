@@ -26,6 +26,8 @@ public class MainActivity extends Activity {
     Button button3;
     Button button2;
     TextView animalName;
+    int hpPoints;
+    int score;
     Random randomizer=new Random();
     @Override
 
@@ -40,7 +42,7 @@ public class MainActivity extends Activity {
         button4 = findViewById(R.id.button4);//IDB4
 
 
-        List<String> names = Arrays.asList("green"," yellow"," red"," blue");
+        List<String> names = Arrays.asList("human","suricata","cat","dog");
         Collections.shuffle(names);
 
         button1.setText("" + names.get(0));
@@ -58,9 +60,15 @@ public class MainActivity extends Activity {
 
     public void humanMakeSound(View view) {
         System.out.println("Human sound!");
+        changeImage(view);
+    }
+    public void changeImage(View view) {
+        ImageView img= (ImageView) findViewById(imageView.getId());
+        img.setImageResource(R.drawable.suricata);
     }
 
-    View.OnClickListener onButtonClickListener = new View.OnClickListener() {
+
+        View.OnClickListener onButtonClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             int nameid=imageView.getId();
